@@ -5,17 +5,16 @@ import {
   Printer, 
   FileText, 
   GraduationCap, 
-  Briefcase, 
   Code2, 
   MapPin, 
-  Sparkles
+  Sparkles,
+  Award
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
 
-
 export default function ResumeModal({ isOpen, onClose, showToast }) {
-  const { personalInfo, education, projects, experience, certifications, achievements } = portfolioData;
+  const { personalInfo, education, projects, certifications, achievements } = portfolioData;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -85,7 +84,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold"
+              className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
               title="Print Resume"
             >
               <Printer className="w-4 h-4" />
@@ -94,7 +93,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
 
             <button
               onClick={handleDownload}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 shadow-sm transition-all flex items-center gap-1.5"
+              className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 shadow-sm transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download PDF</span>
@@ -102,7 +101,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer"
               aria-label="Close resume preview"
             >
               <X className="w-5 h-5" />
@@ -128,10 +127,10 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             </div>
 
             <div className="text-xs space-y-1 text-slate-600 dark:text-slate-300 text-center sm:text-right font-medium">
-              <div>{personalInfo.email}</div>
-              <div>{personalInfo.phone}</div>
+              <div><a href={`mailto:${personalInfo.email}`} className="hover:text-orange-500">{personalInfo.email}</a></div>
+              <div><a href={`tel:${personalInfo.phone}`} className="hover:text-orange-500">{personalInfo.displayPhone || personalInfo.phone}</a></div>
               <div className="text-orange-600 dark:text-orange-400 font-semibold font-mono">
-                github.com/kishanks &bull; linkedin.com/in/kishanks
+                github.com/kishanks &bull; leetcode.com/u/kishan_ks
               </div>
             </div>
           </div>
@@ -146,12 +145,12 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             {education.map((edu, idx) => (
               <div key={idx} className="flex justify-between items-start text-xs sm:text-sm">
                 <div>
-                  <div className="font-bold text-slate-900 dark:text-white">{edu.degree} — {edu.branch}</div>
+                  <div className="font-bold text-slate-900 dark:text-white">{edu.degree}</div>
                   <div className="text-slate-600 dark:text-slate-400 text-xs">{edu.institution}, {edu.location}</div>
                 </div>
                 <div className="text-right shrink-0 font-mono text-xs">
-                  <div className="font-semibold text-orange-600 dark:text-orange-400">{edu.startYear} – {edu.endYear}</div>
-                  <div className="text-slate-500">CGPA: {edu.cgpa}</div>
+                  <div className="font-semibold text-orange-600 dark:text-orange-400">Expected: {edu.expectedGraduation}</div>
+                  <div className="text-slate-500 font-sans">Undergraduate</div>
                 </div>
               </div>
             ))}
@@ -167,23 +166,19 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             <div className="space-y-1.5 text-xs">
               <div>
                 <span className="font-bold text-slate-900 dark:text-white">Languages: </span>
-                <span className="text-slate-600 dark:text-slate-300">Java, C, C++, Python, JavaScript (ES6+), SQL</span>
+                <span className="text-slate-600 dark:text-slate-300">C, C++, Java, Python, JavaScript</span>
               </div>
               <div>
-                <span className="font-bold text-slate-900 dark:text-white">Frontend & Web: </span>
-                <span className="text-slate-600 dark:text-slate-300">React.js, Tailwind CSS, Vite, HTML5, CSS3, REST APIs</span>
+                <span className="font-bold text-slate-900 dark:text-white">Web Development: </span>
+                <span className="text-slate-600 dark:text-slate-300">HTML, CSS, JavaScript, React, Node.js, Vite</span>
               </div>
               <div>
-                <span className="font-bold text-slate-900 dark:text-white">Backend & DB: </span>
-                <span className="text-slate-600 dark:text-slate-300">Node.js, Express, MySQL, PostgreSQL, MongoDB, Supabase</span>
+                <span className="font-bold text-slate-900 dark:text-white">Machine Learning / Data: </span>
+                <span className="text-slate-600 dark:text-slate-300">Python, Pandas, NumPy, Scikit-learn, Matplotlib</span>
               </div>
               <div>
-                <span className="font-bold text-slate-900 dark:text-white">AI & ML: </span>
-                <span className="text-slate-600 dark:text-slate-300">Scikit-learn, Pandas, NumPy, TensorFlow, Matplotlib</span>
-              </div>
-              <div>
-                <span className="font-bold text-slate-900 dark:text-white">Developer Tools: </span>
-                <span className="text-slate-600 dark:text-slate-300">Git, GitHub, VS Code, Postman, Linux CLI, Jupyter</span>
+                <span className="font-bold text-slate-900 dark:text-white">Tools &amp; Technologies: </span>
+                <span className="text-slate-600 dark:text-slate-300">Git, GitHub, VS Code, Vite, Supabase</span>
               </div>
             </div>
           </div>
@@ -192,7 +187,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
           <div className="space-y-3">
             <h3 className="text-xs font-black uppercase tracking-wider text-orange-600 dark:text-orange-400 flex items-center gap-1.5 border-b border-slate-200 dark:border-slate-800 pb-1">
               <Sparkles className="w-4 h-4" />
-              <span>Key Projects</span>
+              <span>Featured Engineering Projects</span>
             </h3>
 
             <div className="space-y-4">
@@ -217,36 +212,15 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             </div>
           </div>
 
-          {/* Experience */}
-          <div className="space-y-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-orange-600 dark:text-orange-400 flex items-center gap-1.5 border-b border-slate-200 dark:border-slate-800 pb-1">
-              <Briefcase className="w-4 h-4" />
-              <span>Experience & Activities</span>
-            </h3>
-
-            <div className="space-y-3">
-              {experience.slice(0, 2).map((exp, idx) => (
-                <div key={idx} className="text-xs space-y-1">
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold text-slate-900 dark:text-white">
-                      {exp.role} — {exp.organization}
-                    </span>
-                    <span className="font-mono text-slate-500">{exp.period}</span>
-                  </div>
-                  <p className="text-slate-600 dark:text-slate-300">{exp.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Certifications & Achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div className="space-y-2">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-                Certifications
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1">
+                <Award className="w-3.5 h-3.5 text-orange-500" />
+                <span>Verified Certifications</span>
               </h4>
               <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-400">
-                {certifications.slice(0, 3).map((c, i) => (
+                {certifications.slice(0, 4).map((c, i) => (
                   <li key={i} className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                     <span>{c.title} ({c.issuer})</span>
@@ -256,11 +230,12 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-                Honors & Problem Solving
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5 text-orange-500" />
+                <span>Honors &amp; Milestones</span>
               </h4>
               <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-400">
-                {achievements.slice(0, 3).map((a, i) => (
+                {achievements.slice(0, 4).map((a, i) => (
                   <li key={i} className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                     <span>{a.title}</span>

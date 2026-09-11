@@ -3,18 +3,20 @@ export const portfolioData = {
     name: "Kishan K S",
     firstName: "Kishan",
     lastName: "K S",
-    title: "Computer Science Engineering Student | Web Developer | AI/ML Enthusiast",
-    shortBio: "Passionate CSE undergraduate with a strong foundation in full-stack web development, data structures, and machine learning. Focused on engineering practical, user-centric software solutions that solve real-world problems.",
+    title: "Computer Science Engineering Student | Full-Stack Developer | AI/ML Enthusiast",
+    shortBio: "Passionate CSE undergraduate at BNM Institute of Technology with a strong foundation in full-stack web development, software engineering, and machine learning. Focused on turning ideas into practical projects that solve real-world problems.",
     location: "Bengaluru, Karnataka, India",
-    email: "kishan.ks.cse@gmail.com", // Editable placeholder
-    phone: "+91 98765 43210", // Editable placeholder
-    status: "Open to Internships & SDE Roles (2025–2026)",
-    resumeUrl: "/resume.pdf", // Configurable resume path
+    institution: "B N M Institute of Technology (BNMIT)",
+    email: "kskishan542@gmail.com",
+    phone: "9663344582",
+    displayPhone: "+91 96633 44582",
+    status: "Open to Internships & Software Engineering Roles (2028)",
+    resumeUrl: "/resume.pdf",
     socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com/in",
-      email: "mailto:kishan.ks.cse@gmail.com",
-      twitter: "https://twitter.com",
+      github: "https://github.com/kishanks",
+      linkedin: "https://linkedin.com/in/kishan-k-s",
+      email: "mailto:kskishan542@gmail.com",
+      phone: "tel:9663344582"
     },
     heroBullets: [
       "Building high-performance web applications with React & modern stacks",
@@ -24,19 +26,19 @@ export const portfolioData = {
   },
 
   stats: [
-    { label: "Projects Built", value: "10+", icon: "FolderGit2", description: "Full-stack & AI/ML apps" },
-    { label: "Technologies Mastered", value: "15+", icon: "Cpu", description: "Languages, tools & frameworks" },
-    { label: "DSA Problems Solved", value: "350+", icon: "Code2", description: "Across LeetCode & HackerRank" },
+    { label: "Projects Built", value: "8+", icon: "FolderGit2", description: "Full-stack & AI/ML apps" },
+    { label: "Core Technologies", value: "14+", icon: "Cpu", description: "Languages, tools & frameworks" },
+    { label: "DSA Problems Solved", value: "350+", icon: "Code2", description: "Across LeetCode & platforms" },
     { label: "Certifications", value: "5+", icon: "Award", description: "Verified credentials" },
-    { label: "Current CGPA", value: "9.3/10", icon: "GraduationCap", description: "Academic excellence" },
+    { label: "Academic Standing", value: "BNMIT", icon: "GraduationCap", description: "Class of 2028" },
   ],
 
   about: {
-    intro: "I am a dedicated Computer Science Engineering student currently pursuing my Bachelor's degree in Bengaluru. My journey in technology is driven by a deep curiosity for understanding how scalable systems work and a passion for creating impactful digital solutions.",
+    greeting: "Hi, I'm Kishan K S, a Computer Science Engineering student passionate about building software and exploring new technologies.",
     paragraphs: [
-      "Over the course of my academic journey, I have developed a solid foundation in core computer science disciplines including Data Structures & Algorithms, Object-Oriented Design, Database Management, and Operating Systems. I bridge theoretical fundamentals with hands-on development by crafting full-stack web platforms and applied AI/ML applications.",
-      "My notable projects include Metro-Bot, a dedicated transit assistant web app for Bengaluru Metro commuters, and UrbanEye, a civic-engagement reporting platform that leverages automated classification to streamline municipal complaint management.",
-      "When I am not coding, you will find me participating in hackathons, exploring open-source repositories, sharpening my problem-solving skills on competitive coding platforms, or keeping up with the latest advancements in AI."
+      "I'm currently pursuing my B.E. in Computer Science and Engineering at B N M Institute of Technology. My journey in technology has led me to explore web development, machine learning, backend development, and software engineering.",
+      "I enjoy turning ideas into practical projects and learning by building. I've worked on projects involving web applications, machine learning, mapping solutions, and interactive software, while continuously improving my programming and problem-solving skills.",
+      "I'm currently focused on becoming a stronger full-stack developer and software engineer, while exploring AI/ML and building projects that solve real-world problems."
     ],
     focusAreas: [
       {
@@ -58,73 +60,51 @@ export const portfolioData = {
         title: "Problem Solving",
         description: "Strengthening algorithmic thinking, algorithmic complexity analysis, and competitive programming with Java, C++, and Python.",
         icon: "Terminal"
-      },
-      {
-        title: "Practical Application Dev",
-        description: "Transforming real-life challenges into intuitive digital products like civic reporting platforms and transit navigators.",
-        icon: "Lightbulb"
       }
     ]
   },
 
   education: [
     {
-      degree: "Bachelor of Engineering (B.E.)",
-      branch: "Computer Science and Engineering",
-      institution: "Visvesvaraya Technological University (VTU) Affiliated College",
-      institutionShort: "VTU Engineering College",
+      degree: "B.E. Computer Science & Engineering",
+      branch: "Computer Science & Engineering",
+      institution: "B N M Institute of Technology (BNMIT)",
+      institutionShort: "BNMIT, Bengaluru",
       location: "Bengaluru, Karnataka, India",
-      startYear: "2022",
-      endYear: "2026",
-      cgpa: "9.3 / 10.0 (Aggregate)",
-      status: "Currently in 3rd / 4th Year",
+      startYear: "2024",
+      endYear: "2028",
+      expectedGraduation: "2028",
+      status: "Pursuing B.E. (Expected Graduation: 2028)",
       highlights: [
-        "Consistently maintained academic excellence across core CS semesters",
-        "Active member of the Department Technical Committee and Coding Club",
-        "Led team project initiatives in Web Technologies and Machine Learning courses"
+        "Pursuing Bachelor of Engineering in Computer Science & Engineering at BNMIT",
+        "Focus on Web Development, Machine Learning, Backend Systems, and Data Structures",
+        "Actively building practical engineering applications and solving algorithmic challenges"
       ],
       coursework: [
         "Data Structures & Algorithms",
         "Object-Oriented Programming (Java/C++)",
-        "Database Management Systems (DBMS)",
+        "Database Management Systems",
+        "Web Application Development",
         "Operating Systems",
         "Computer Networks",
-        "Machine Learning & Data Mining",
-        "Web Application Development",
-        "Software Engineering & Agile"
+        "Machine Learning Fundamentals"
       ]
-    },
-    {
-      degree: "Pre-University / Higher Secondary (12th Grade - PCMC)",
-      branch: "Physics, Chemistry, Mathematics, Computer Science",
-      institution: "Pre-University College",
-      institutionShort: "PU College",
-      location: "Karnataka, India",
-      startYear: "2020",
-      endYear: "2022",
-      cgpa: "90%+ / Distinction",
-      status: "Completed",
-      highlights: [
-        "Distinction in Mathematics and Computer Science",
-        "Built early interest in algorithmic programming and logic design"
-      ],
-      coursework: ["Physics", "Chemistry", "Mathematics", "Computer Science (C++)"]
     }
   ],
 
   skills: {
     categories: [
       {
-        id: "programming",
-        name: "Programming Languages",
+        id: "languages",
+        name: "Languages",
         icon: "Code2",
-        description: "Core languages used for problem solving, backend systems, and scripting",
+        description: "Core programming languages for algorithmic problem solving and development",
         skills: [
-          { name: "C", level: 85, tag: "Core", icon: "Code" },
-          { name: "C++", level: 88, tag: "DSA & OOP", icon: "Binary" },
-          { name: "Java", level: 90, tag: "OOP & Backend", icon: "Coffee" },
-          { name: "Python", level: 92, tag: "AI/ML & Scripting", icon: "FileCode" },
-          { name: "JavaScript (ES6+)", level: 90, tag: "Web & Logic", icon: "Braces" },
+          { name: "C", tag: "System Programming", icon: "Code" },
+          { name: "C++", tag: "DSA & OOP", icon: "Binary" },
+          { name: "Java", tag: "OOP & Backend", icon: "Coffee" },
+          { name: "Python", tag: "AI/ML & Scripting", icon: "FileCode" },
+          { name: "JavaScript", tag: "Web & Logic", icon: "Braces" },
         ]
       },
       {
@@ -133,53 +113,37 @@ export const portfolioData = {
         icon: "Globe",
         description: "Modern frontend and full-stack web engineering technologies",
         skills: [
-          { name: "React.js", level: 92, tag: "Frontend Library", icon: "Atom" },
-          { name: "Tailwind CSS", level: 95, tag: "Styling & UI", icon: "Palette" },
-          { name: "HTML5 & CSS3", level: 95, tag: "Semantic Markup", icon: "Layout" },
-          { name: "Vite", level: 90, tag: "Build Tool", icon: "Zap" },
-          { name: "Node.js", level: 80, tag: "Backend Runtime", icon: "Server" },
-          { name: "Express.js", level: 78, tag: "REST APIs", icon: "Network" },
-          { name: "RESTful APIs", level: 88, tag: "API Integration", icon: "Share2" },
-        ]
-      },
-      {
-        id: "database",
-        name: "Databases & Storage",
-        icon: "Database",
-        description: "Relational, document, and cloud database management",
-        skills: [
-          { name: "MySQL", level: 86, tag: "Relational SQL", icon: "Database" },
-          { name: "PostgreSQL", level: 82, tag: "Advanced SQL", icon: "HardDrive" },
-          { name: "MongoDB", level: 84, tag: "NoSQL Document", icon: "FolderTree" },
-          { name: "Supabase", level: 80, tag: "Backend as a Service", icon: "Cloud" },
+          { name: "HTML", tag: "Semantic Markup", icon: "Layout" },
+          { name: "CSS", tag: "Styling & Responsive UI", icon: "Palette" },
+          { name: "JavaScript", tag: "ES6+ Logic", icon: "Braces" },
+          { name: "React", tag: "Frontend Library", icon: "Atom" },
+          { name: "Node.js", tag: "Backend Runtime", icon: "Server" },
         ]
       },
       {
         id: "aiml",
-        name: "AI & Machine Learning",
+        name: "Machine Learning / Data",
         icon: "Brain",
-        description: "Data analysis, predictive modeling, and deep learning foundations",
+        description: "Data analysis, machine learning models, and visualization tools",
         skills: [
-          { name: "Python for Data Science", level: 92, tag: "Data Analysis", icon: "FileText" },
-          { name: "Pandas", level: 90, tag: "Data Manipulation", icon: "Table" },
-          { name: "NumPy", level: 90, tag: "Numerical Arrays", icon: "Grid" },
-          { name: "Scikit-learn", level: 85, tag: "Machine Learning", icon: "Cpu" },
-          { name: "TensorFlow", level: 75, tag: "Neural Networks", icon: "Activity" },
-          { name: "Matplotlib & Seaborn", level: 86, tag: "Data Visualization", icon: "BarChart3" },
+          { name: "Python", tag: "Core ML Language", icon: "FileCode" },
+          { name: "Pandas", tag: "Data Manipulation", icon: "Table" },
+          { name: "NumPy", tag: "Numerical Computing", icon: "Grid" },
+          { name: "Scikit-learn", tag: "Machine Learning", icon: "Cpu" },
+          { name: "Matplotlib", tag: "Data Visualization", icon: "BarChart3" },
         ]
       },
       {
         id: "tools",
-        name: "Tools & DevOps",
+        name: "Tools & Technologies",
         icon: "Wrench",
-        description: "Developer workflows, version control, and productivity tools",
+        description: "Developer workflows, version control, build tools, and backend services",
         skills: [
-          { name: "Git", level: 90, tag: "Version Control", icon: "GitBranch" },
-          { name: "GitHub", level: 92, tag: "Collaboration & CI", icon: "Github" },
-          { name: "VS Code", level: 95, tag: "Primary Editor", icon: "Code2" },
-          { name: "Jupyter Notebook", level: 88, tag: "Data Exploration", icon: "BookOpen" },
-          { name: "Postman", level: 85, tag: "API Testing", icon: "Send" },
-          { name: "Linux / Bash", level: 80, tag: "CLI & Scripting", icon: "Terminal" },
+          { name: "Git", tag: "Version Control", icon: "GitBranch" },
+          { name: "GitHub", tag: "Collaboration & Repos", icon: "Github" },
+          { name: "VS Code", tag: "Primary IDE", icon: "Code2" },
+          { name: "Vite", tag: "Build Tool", icon: "Zap" },
+          { name: "Supabase", tag: "Backend as a Service", icon: "Database" },
         ]
       }
     ]
@@ -273,34 +237,6 @@ export const portfolioData = {
       }
     },
     {
-      id: "algorunner",
-      title: "Algorunner",
-      tagline: "Interactive Java Algorithm & Data Structure Visualizer",
-      category: "Java",
-      categories: ["Java", "Web", "Algorithms"],
-      featured: false,
-      image: "algorunner_preview",
-      badge: "Algorithm Tool",
-      shortDescription: "An educational visualizer platform for core computer science algorithms and data structures, featuring step-by-step memory frame execution, pointer movement, and time-complexity benchmarks.",
-      problem: "Abstract pointer mutations, recursion call stacks, and graph search traversals are difficult for students to conceptualize solely from static textbooks or terminal outputs.",
-      solution: "Constructed a real-time visual canvas supporting interactive array sorting, linked list manipulations, BST tree balancing, and Dijkstra/BFS/DFS pathfinding algorithms.",
-      features: [
-        "Step-by-step interactive timeline playback with adjustable animation speed",
-        "Custom array and graph input builder with random and worst-case generators",
-        "Synchronized Java and Python code highlights alongside memory states",
-        "Live comparison benchmarks measuring actual operational swap and comparison counts",
-        "Clean dark/light visual modes tailored for lecture presentations"
-      ],
-      technologies: ["Java", "JavaScript", "React", "Tailwind CSS", "HTML5 Canvas"],
-      githubUrl: "https://github.com/kishanks/algorunner",
-      liveDemoUrl: "https://algorunner.vercel.app",
-      stats: {
-        stars: "9+",
-        forks: "2",
-        status: "Active"
-      }
-    },
-    {
       id: "codereview-ai",
       title: "CodeReview AI",
       tagline: "Automated Pull Request Code Quality & Security Auditor",
@@ -341,11 +277,11 @@ export const portfolioData = {
       problem: "Recruiters and hiring managers require a clean, fast, and structured platform to evaluate a candidate's projects, technical skills, and achievements without unnecessary clutter.",
       solution: "Crafted a bespoke, fully responsive web experience with optimized typography, dynamic project filters, verified certification cards, and instant interactive contact workflows.",
       features: [
-        "Tailored White & Vibrant Orange SaaS aesthetic with dynamic dark theme",
+        "Tailored White & Vibrant Orange aesthetic with dynamic dark theme",
         "Comprehensive project filtering with detailed modal deep-dive dialogs",
-        "Dedicated coding profiles section showcasing LeetCode, GitHub, HackerRank",
-        "Centralized configuration architecture for effortless data updates",
-        "Full accessibility, responsive mobile navigation, and confetti feedback"
+        "Consolidated achievements and coding profiles section showcasing LeetCode and GitHub",
+        "Clean, modern card layouts without subjective skill percentages",
+        "Full accessibility, responsive mobile navigation, and interactive feedback"
       ],
       technologies: ["React 19", "Vite", "Tailwind CSS v4", "Lucide React", "Canvas Confetti"],
       githubUrl: "https://github.com/kishanks/portfolio",
@@ -355,65 +291,6 @@ export const portfolioData = {
         forks: "2",
         status: "Active"
       }
-    }
-  ],
-
-  experience: [
-    {
-      role: "Software Developer Intern",
-      organization: "Tech Innovation Labs (Placeholder / Summer Internship)",
-      location: "Bengaluru, India",
-      period: "June 2024 – August 2024",
-      type: "Internship",
-      description: "Collaborated with the software engineering team to design, build, and deploy full-stack web application modules and RESTful microservices.",
-      achievements: [
-        "Developed reusable React UI components that improved frontend loading performance by 25%",
-        "Integrated backend REST APIs with Node.js and implemented data validation middlewares",
-        "Participated in daily agile standups, code reviews, and Git-based collaborative sprint workflows",
-        "Contributed to database query optimization for MySQL tables handling user transaction logs"
-      ],
-      skills: ["React", "JavaScript", "Node.js", "MySQL", "Git", "REST APIs"]
-    },
-    {
-      role: "Technical Lead & Member",
-      organization: "Computer Science Students Association (Department Club)",
-      location: "College Campus, Bengaluru",
-      period: "August 2023 – Present",
-      type: "Technical Activity",
-      description: "Leading technical workshops and hands-on coding sessions for junior students across full-stack development, version control, and problem solving.",
-      achievements: [
-        "Conducted 4+ technical bootcamps on Git/GitHub fundamentals and React basics attended by 150+ students",
-        "Mentored student teams during internal college hackathons and coding challenges",
-        "Managed department technical project repository and documentation standards"
-      ],
-      skills: ["Leadership", "Public Speaking", "Git", "React", "Mentoring"]
-    },
-    {
-      role: "Hackathon Participant & Finalist",
-      organization: "State-Level Smart City Hackathon / Inter-College Hackathons",
-      location: "Bengaluru, India",
-      period: "2023 – 2024",
-      type: "Hackathons",
-      description: "Built rapid full-stack prototypes addressing urban transportation and civic grievance workflows under intensive 24–36 hour timelines.",
-      achievements: [
-        "Ranked among top finalist teams for pitching UrbanEye civic tracking prototype",
-        "Designed and deployed responsive web interfaces and API integrations under tight time constraints",
-        "Presented technical architecture and live demos to industry judging panels"
-      ],
-      skills: ["Rapid Prototyping", "Full-Stack Dev", "Teamwork", "Pitching"]
-    },
-    {
-      role: "Open Source Contributor",
-      organization: "GitHub Community & Developer Tools",
-      location: "Remote / Online",
-      period: "2023 – Present",
-      type: "Open Source",
-      description: "Actively contributing to open-source developer tooling, documentation, and frontend libraries.",
-      achievements: [
-        "Submitted pull requests for bug fixes, UI improvements, and documentation enhancements",
-        "Authored open-source utility components and starters shared with student developer community"
-      ],
-      skills: ["Git", "GitHub Actions", "Documentation", "Code Quality"]
     }
   ],
 
@@ -475,91 +352,55 @@ export const portfolioData = {
       icon: "Trophy"
     },
     {
-      title: "350+ Problems Solved on LeetCode & HackerRank",
+      title: "350+ Problems Solved on LeetCode",
       category: "Competitive Programming",
       date: "2023 – Present",
-      organization: "Competitive Coding Platforms",
-      description: "Maintained a consistent daily problem-solving streak focusing on Arrays, Trees, Graphs, Dynamic Programming, and System Design fundamentals.",
+      organization: "LeetCode & Competitive Platforms",
+      description: "Maintained a consistent problem-solving streak focusing on Arrays, Trees, Graphs, Dynamic Programming, and algorithmic problem solving in Java, C++, and Python.",
       icon: "Code2"
     },
     {
-      title: "5-Star Gold Badge in Problem Solving & Python",
+      title: "5-Star Proficiency in Problem Solving & Python",
       category: "Competitions",
       date: "2023",
-      organization: "HackerRank",
-      description: "Earned 5-Star proficiency badges in both Problem Solving and Python tracks by solving complex algorithmic challenges.",
+      organization: "Competitive Coding Assessments",
+      description: "Earned verified skill distinctions in both Problem Solving and Python tracks by solving complex algorithmic challenges.",
       icon: "Award"
     },
     {
-      title: "Academic Merit & Department Recognition",
+      title: "Academic Excellence & Department Recognition",
       category: "Academic",
-      date: "2023",
-      organization: "College of Engineering",
-      description: "Awarded Certificate of Merit for outstanding academic performance and maintaining a 9.3+ CGPA in Computer Science Engineering.",
+      date: "2024",
+      organization: "Department of Computer Science & Engineering",
+      description: "Recognized for consistent academic diligence, technical engagement, and active contribution to engineering course projects.",
       icon: "Medal"
     }
   ],
 
   codingProfiles: [
     {
-      platform: "LeetCode",
-      handle: "kishan_ks",
-      url: "https://leetcode.com",
-      badge: "Top 15%",
-      stats: "250+ Solved",
-      color: "#FFA116",
-      bgLight: "bg-amber-50 dark:bg-amber-950/30",
-      borderLight: "border-amber-200 dark:border-amber-800/40",
-      description: "Focus on Medium & Hard DSA questions in Java and C++.",
-      icon: "Code2"
-    },
-    {
       platform: "GitHub",
       handle: "kishanks",
-      url: "https://github.com",
+      url: "https://github.com/kishanks",
       badge: "Active",
-      stats: "20+ Repositories",
-      color: "#24292e",
-      bgLight: "bg-slate-50 dark:bg-slate-900/40",
-      borderLight: "border-slate-200 dark:border-slate-800/40",
-      description: "Open source contributions, web apps, and machine learning scripts.",
+      stats: "Public Repos & Open Source",
+      color: "#ea580c",
+      bgLight: "bg-slate-50 dark:bg-slate-900/60",
+      borderLight: "border-orange-300/60 dark:border-slate-800/80",
+      description: "Personal projects, full-stack web applications, AI/ML models, and open-source explorations.",
       icon: "Github"
     },
     {
-      platform: "HackerRank",
+      platform: "LeetCode",
       handle: "kishan_ks",
-      url: "https://hackerrank.com",
-      badge: "5-Star Gold",
-      stats: "Problem Solving & Python",
-      color: "#00EA64",
-      bgLight: "bg-emerald-50 dark:bg-emerald-950/30",
-      borderLight: "border-emerald-200 dark:border-emerald-800/40",
-      description: "Earned verified skill badges in Core Algorithms & Python.",
-      icon: "Award"
-    },
-    {
-      platform: "CodeChef",
-      handle: "kishan_ks",
-      url: "https://codechef.com",
-      badge: "3-Star",
-      stats: "1600+ Rating",
-      color: "#5B4638",
-      bgLight: "bg-orange-50 dark:bg-orange-950/30",
-      borderLight: "border-orange-200 dark:border-orange-800/40",
-      description: "Regular participant in Starters and Cook-Off rated contests.",
-      icon: "Binary"
-    },
-    {
-      platform: "GeeksforGeeks",
-      handle: "kishan_ks",
-      url: "https://geeksforgeeks.org",
-      badge: "400+ Score",
-      stats: "100+ Articles & POTD",
-      color: "#2F8D46",
-      bgLight: "bg-green-50 dark:bg-green-950/30",
-      borderLight: "border-green-200 dark:border-green-800/40",
-      description: "Practice problem of the day and CS fundamental concept articles.",
-      icon: "BookOpen"
+      url: "https://leetcode.com/u/kishan_ks",
+      badge: "350+ Solved",
+      stats: "DSA & Problem Solving",
+      color: "#FFA116",
+      bgLight: "bg-amber-50/70 dark:bg-amber-950/20",
+      borderLight: "border-amber-300/60 dark:border-amber-800/40",
+      description: "Regular practice across Data Structures, Algorithms, Arrays, Trees, Graphs, and Dynamic Programming.",
+      icon: "Code2"
     }
   ],
 
@@ -595,14 +436,14 @@ export const portfolioData = {
       topics: ["machine-learning", "python", "fastapi", "scikit-learn", "health-ai"]
     },
     {
-      name: "algorunner",
-      description: "Interactive data structures and algorithmic visualizer for computer science students.",
-      language: "Java",
-      languageColor: "#b07219",
-      stars: 9,
-      forks: 2,
-      url: "https://github.com/kishanks/algorunner",
-      topics: ["java", "algorithms", "data-structures", "visualization"]
+      name: "codereview-ai",
+      description: "Automated PR static code analysis & linting reviewer pipeline for GitHub repositories.",
+      language: "Python",
+      languageColor: "#3572A5",
+      stars: 11,
+      forks: 5,
+      url: "https://github.com/kishanks/codereview-ai",
+      topics: ["python", "fastapi", "devtools", "github-api"]
     }
   ]
 };

@@ -113,7 +113,7 @@ export default function ProjectModal({ project, onClose }) {
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-slate-950 dark:text-white uppercase tracking-wider flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-              <span>Key Features & Capabilities</span>
+              <span>Key Features &amp; Capabilities</span>
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {project.features.map((feature, idx) => (
@@ -129,7 +129,7 @@ export default function ProjectModal({ project, onClose }) {
           <div className="space-y-2">
             <h4 className="text-xs font-bold text-slate-950 dark:text-white uppercase tracking-wider flex items-center gap-2">
               <Layers className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-              <span>Technologies & Tools Applied</span>
+              <span>Technologies &amp; Tools Applied</span>
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, idx) => (
@@ -141,6 +141,22 @@ export default function ProjectModal({ project, onClose }) {
                 </span>
               ))}
             </div>
+          </div>
+
+          {/* What I Learned / Engineering Insights */}
+          <div className="p-4.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-orange-200/80 dark:border-slate-700 space-y-2">
+            <h4 className="text-xs font-bold text-slate-950 dark:text-white uppercase tracking-wider flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
+              <span>Key Learnings &amp; Architectural Takeaway</span>
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-300 leading-relaxed font-normal">
+              {project.id === 'metro-bot' && "Strengthened algorithmic implementation of graph traversal (Dijkstra's shortest path) under strict frontend latency constraints, while architecting offline-first LocalStorage persistence for mobile commuters."}
+              {project.id === 'urban-eye' && "Gained hands-on experience designing end-to-end full-stack architectures integrating Leaflet geospatial coordinate capture with automated machine learning classification for civic triage pipelines."}
+              {project.id === 'smarthealth-ai' && "Mastered multi-class classification workflows with Scikit-learn, data preprocessing in Pandas/NumPy, and exposing low-latency inference endpoints via FastAPI microservices."}
+              {project.id === 'codereview-ai' && "Deepened understanding of AST syntax tree parsing, GitHub REST webhooks, and automating code linting and security analysis for team development velocity."}
+              {project.id === 'portfolio-v2' && "Emphasized web performance, semantic HTML accessibility, modern React component architecture, and building a cohesive, responsive UI design system with Tailwind CSS."}
+              {!['metro-bot', 'urban-eye', 'smarthealth-ai', 'codereview-ai', 'portfolio-v2'].includes(project.id) && "Deepened engineering problem-solving, modular architecture design, and building robust, user-centric software solutions."}
+            </p>
           </div>
         </div>
 

@@ -3,9 +3,9 @@ import {
   FileText, 
   Download, 
   Eye, 
-  Briefcase, 
   GraduationCap, 
-  Award
+  Award,
+  Sparkles
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
@@ -62,15 +62,15 @@ export default function ResumeSection({ onViewResume, showToast }) {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-orange-200/80 dark:border-slate-700/60 flex items-center gap-2 text-xs font-bold text-slate-900 dark:text-slate-200 shadow-2xs">
                   <GraduationCap className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
-                  <span>B.E. CSE (2022–2026)</span>
+                  <span>B.E. CSE &bull; BNMIT (2028)</span>
                 </div>
                 <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-orange-200/80 dark:border-slate-700/60 flex items-center gap-2 text-xs font-bold text-slate-900 dark:text-slate-200 shadow-2xs">
                   <Award className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
-                  <span>9.3 / 10.0 CGPA</span>
+                  <span>Verified Certifications</span>
                 </div>
                 <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-orange-200/80 dark:border-slate-700/60 flex items-center gap-2 text-xs font-bold text-slate-900 dark:text-slate-200 shadow-2xs">
-                  <Briefcase className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
-                  <span>Summer SDE Intern</span>
+                  <Sparkles className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
+                  <span>Hackathon Finalist</span>
                 </div>
               </div>
             </div>

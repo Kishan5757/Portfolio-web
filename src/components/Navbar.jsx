@@ -15,14 +15,11 @@ export default function Navbar({ darkMode, setDarkMode, onResumeClick }) {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const navLinks = [
+    { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Certificates', href: '#certifications' },
     { name: 'Achievements', href: '#achievements' },
-    { name: 'Coding Profiles', href: '#profiles' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -39,7 +36,7 @@ export default function Navbar({ darkMode, setDarkMode, onResumeClick }) {
       }
 
       // Active section spy
-      const sections = ['hero', 'about', 'education', 'skills', 'projects', 'experience', 'certifications', 'achievements', 'profiles', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'projects', 'achievements', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -111,7 +108,7 @@ export default function Navbar({ darkMode, setDarkMode, onResumeClick }) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center space-x-1" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center space-x-1" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const sectionId = link.href.substring(1);
               const isActive = activeSection === sectionId;
@@ -163,7 +160,7 @@ export default function Navbar({ darkMode, setDarkMode, onResumeClick }) {
             {/* Mobile Hamburger Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-orange-100/70 dark:hover:bg-slate-800 transition-colors focus:outline-none"
+              className="lg:hidden p-2 rounded-xl text-slate-800 dark:text-slate-200 hover:bg-orange-100/70 dark:hover:bg-slate-800 transition-colors focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -179,7 +176,7 @@ export default function Navbar({ darkMode, setDarkMode, onResumeClick }) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white/95 dark:bg-[#0b0f17]/95 backdrop-blur-xl border-b border-orange-200 dark:border-orange-500/10 px-4 pt-3 pb-6 space-y-2 animate-fadeIn shadow-xl">
+        <div className="lg:hidden bg-white/95 dark:bg-[#0b0f17]/95 backdrop-blur-xl border-b border-orange-200 dark:border-orange-500/10 px-4 pt-3 pb-6 space-y-2 animate-fadeIn shadow-xl">
           <div className="grid grid-cols-2 gap-2">
             {navLinks.map((link) => {
               const sectionId = link.href.substring(1);

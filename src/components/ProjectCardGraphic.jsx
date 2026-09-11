@@ -4,7 +4,6 @@ import {
   MapPin, 
   ArrowRight, 
   Activity, 
-  Cpu, 
   AlertTriangle, 
   CheckCircle2, 
   Layers,
@@ -187,45 +186,6 @@ export default function ProjectCardGraphic({ projectId, title }) {
         <div className="flex items-center justify-between text-[10px] text-slate-400 z-10 pt-1 border-t border-slate-800">
           <span>Random Forest + SVM</span>
           <span className="text-teal-400">FastAPI Sub-50ms</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (projectId === 'algorunner') {
-    return (
-      <div className="relative w-full h-52 bg-gradient-to-br from-slate-900 via-[#271d18] to-slate-950 rounded-xl overflow-hidden p-4 border border-orange-500/20 text-white flex flex-col justify-between select-none">
-        <div className="flex items-center justify-between z-10">
-          <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-orange-500/20 text-orange-400 border border-orange-500/30">
-              <Cpu className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="text-xs font-bold tracking-wider text-orange-400 uppercase">Algorunner</div>
-              <div className="text-[10px] text-slate-400">DSA Interactive Sandbox</div>
-            </div>
-          </div>
-          <span className="px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-300 text-[10px] font-semibold">
-            Step-by-Step
-          </span>
-        </div>
-
-        {/* Visual Array Bars */}
-        <div className="my-auto z-10 flex items-end justify-center gap-1.5 h-16 bg-slate-800/80 rounded-lg p-2 border border-slate-700/60">
-          {[35, 60, 20, 90, 45, 75, 30, 85, 50, 65].map((h, i) => (
-            <div
-              key={i}
-              className={`w-4 rounded-t transition-all ${
-                i === 3 || i === 7 ? 'bg-orange-500 shadow-[0_0_8px_#f97316]' : 'bg-slate-600'
-              }`}
-              style={{ height: `${h}%` }}
-            />
-          ))}
-        </div>
-
-        <div className="flex items-center justify-between text-[10px] text-slate-400 z-10 pt-1 border-t border-slate-800">
-          <span>QuickSort / Dijkstra / BST</span>
-          <span className="text-orange-400 font-mono">O(N log N)</span>
         </div>
       </div>
     );

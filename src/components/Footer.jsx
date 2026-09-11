@@ -16,14 +16,11 @@ export default function Footer() {
   };
 
   const navLinks = [
+    { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Certifications', href: '#certifications' },
     { name: 'Achievements', href: '#achievements' },
-    { name: 'Profiles', href: '#profiles' },
     { name: 'Contact', href: '#contact' },
   ];
 

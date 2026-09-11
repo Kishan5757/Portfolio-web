@@ -132,14 +132,17 @@ export default function Contact({ showToast }) {
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Email</div>
-                    <a href={personalInfo.socials.email} className="text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100 hover:text-orange-600">
+                    <a 
+                      href={`mailto:${personalInfo.email}`} 
+                      className="text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    >
                       {personalInfo.email}
                     </a>
                   </div>
                 </div>
                 <button
                   onClick={() => copyToClipboard(personalInfo.email, 'Email address')}
-                  className="p-2 text-slate-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  className="p-2 text-slate-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
                   title="Copy email"
                   aria-label="Copy email address"
                 >
@@ -155,14 +158,17 @@ export default function Contact({ showToast }) {
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Phone</div>
-                    <div className="text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100">
-                      {personalInfo.phone}
-                    </div>
+                    <a 
+                      href={`tel:${personalInfo.phone}`} 
+                      className="text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    >
+                      {personalInfo.displayPhone || personalInfo.phone}
+                    </a>
                   </div>
                 </div>
                 <button
                   onClick={() => copyToClipboard(personalInfo.phone, 'Phone number')}
-                  className="p-2 text-slate-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  className="p-2 text-slate-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
                   title="Copy phone"
                   aria-label="Copy phone number"
                 >

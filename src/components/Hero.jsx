@@ -101,7 +101,7 @@ export default function Hero({ showToast }) {
           </span>
           <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white/90 dark:bg-slate-800/80 border border-orange-200/80 dark:border-slate-700/60 shadow-xs">
             <GraduationCap className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-            B.E. Computer Science &bull; CGPA: 9.3
+            B.E. CSE @ BNMIT &bull; Class of 2028
           </span>
           <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white/90 dark:bg-slate-800/80 border border-orange-200/80 dark:border-slate-700/60 shadow-xs">
             <Code2 className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
