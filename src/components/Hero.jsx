@@ -25,12 +25,12 @@ export default function Hero({ showToast }) {
     });
 
     if (showToast) {
-      showToast('Resume download triggered! (Ensure resume.pdf is in public folder)');
+      showToast('Downloading Kishan_KS_Resume.pdf...');
     }
 
     // Trigger download
     const link = document.createElement('a');
-    link.href = personalInfo.resumeUrl;
+    link.href = personalInfo.resumeUrl || '/resume.pdf';
     link.download = 'Kishan_KS_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);

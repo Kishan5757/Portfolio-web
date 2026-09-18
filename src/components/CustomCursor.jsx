@@ -1,21 +1,8 @@
-﻿import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 
 export default function CustomCursor() {
-  const dotRef = useRef(null);
-  const ringRef = useRef(null);
-  const pos = useRef({ x: -100, y: -100 });
-  const ringPos = useRef({ x: -100, y: -100 });
-  const raf = useRef(null);
-
-  const animate = useCallback(() => {
-    ringPos.current.x += (pos.current.x - ringPos.current.x) * 0.13;
-    ringPos.current.y += (pos.current.y - ringPos.current.y) * 0.13;
-    if (dotRef.current)
-      dotRef.current.style.transform = `translate(${pos.current.x}px, ${pos.current.y}px)`;
-    if (ringRef.current)
-      ringRef.current.style.transform = `translate(${ringPos.current.x}px, ${ringPos.current.y}px)`;
-    raf.current = requestAnimationFrame(animate);
-  }, []);
+  const cursorRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const spawnRipple = useCallback((e) => {
     const ripple = document.createElement("span");
@@ -27,35 +14,81 @@ export default function CustomCursor() {
   }, []);
 
   const onDown = useCallback(() => {
-    dotRef.current?.classList.add("cursor-dot--pressed");
-    ringRef.current?.classList.add("cursor-ring--pressed");
+    cursorRef.current?.classList.add("cursor-arrow--pressed");
   }, []);
 
   const onUp = useCallback(() => {
-    dotRef.current?.classList.remove("cursor-dot--pressed");
-    ringRef.current?.classList.remove("cursor-ring--pressed");
+    cursorRef.current?.classList.remove("cursor-arrow--pressed");
   }, []);
 
   useEffect(() => {
-    const move = (e) => { pos.current.x = e.clientX; pos.current.y = e.clientY; };
-    window.addEventListener("mousemove", move);
+    const move = (e) => {
+      if (!isVisible) setIsVisible(true);
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      }
+    };
+
+    const onLeave = () => {
+      setIsVisible(false);
+    };
+
+    const onEnter = () => {
+      setIsVisible(true);
+    };
+
+    window.addEventListener("mousemove", move, { passive: true });
     window.addEventListener("mousedown", onDown);
     window.addEventListener("mouseup", onUp);
     window.addEventListener("click", spawnRipple);
-    raf.current = requestAnimationFrame(animate);
+    document.addEventListener("mouseleave", onLeave);
+    document.addEventListener("mouseenter", onEnter);
+
     return () => {
       window.removeEventListener("mousemove", move);
       window.removeEventListener("mousedown", onDown);
       window.removeEventListener("mouseup", onUp);
       window.removeEventListener("click", spawnRipple);
-      cancelAnimationFrame(raf.current);
+      document.removeEventListener("mouseleave", onLeave);
+      document.removeEventListener("mouseenter", onEnter);
     };
-  }, [animate, onDown, onUp, spawnRipple]);
+  }, [isVisible, onDown, onUp, spawnRipple]);
 
   return (
-    <>
-      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
-      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
-    </>
+    <div
+      ref={cursorRef}
+      className={`cursor-arrow ${isVisible ? "cursor-arrow--visible" : ""}`}
+      aria-hidden="true"
+    >
+      <svg
+        className="cursor-arrow-svg"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="cursor-orange-gradient" x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#fb923c" />
+            <stop offset="60%" stopColor="#f97316" />
+            <stop offset="100%" stopColor="#ea580c" />
+          </linearGradient>
+          <filter id="cursor-shadow" x="-2" y="-2" width="28" height="28" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0.5" dy="1.5" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.45" />
+          </filter>
+        </defs>
+        <path
+          d="M0 0 L0 19 L4.8 14.5 L8.6 22.5 L11.8 21 L8 13.2 L15 13.2 Z"
+          fill="url(#cursor-orange-gradient)"
+          stroke="#ffffff"
+          strokeWidth="1.25"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+          filter="url(#cursor-shadow)"
+        />
+      </svg>
+    </div>
   );
 }
+

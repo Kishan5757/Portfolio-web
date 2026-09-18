@@ -27,7 +27,7 @@ export default function ResumeSection({ onViewResume, showToast }) {
     }
 
     const link = document.createElement('a');
-    link.href = personalInfo.resumeUrl;
+    link.href = personalInfo.resumeUrl || '/resume.pdf';
     link.download = 'Kishan_KS_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
@@ -79,7 +79,7 @@ export default function ResumeSection({ onViewResume, showToast }) {
             <div className="lg:col-span-4 flex flex-col gap-3.5 justify-center">
               <button
                 onClick={onViewResume}
-                className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-orange-300/80 dark:border-slate-700 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-orange-300/80 dark:border-slate-700 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Eye className="w-4 h-4 text-orange-600 dark:text-orange-500" />
                 <span>View Interactive Resume</span>
@@ -87,7 +87,7 @@ export default function ResumeSection({ onViewResume, showToast }) {
 
               <button
                 onClick={handleDownload}
-                className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 shadow-md shadow-orange-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 shadow-md shadow-orange-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 <span>Download Resume (PDF)</span>
@@ -95,7 +95,7 @@ export default function ResumeSection({ onViewResume, showToast }) {
 
               <div className="text-center">
                 <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                  Configurable path: <code className="font-mono text-orange-600 dark:text-orange-400 font-bold">public/resume.pdf</code>
+                  ATS-Friendly Format &bull; PDF &amp; Interactive Web Version Available
                 </span>
               </div>
             </div>
